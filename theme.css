@@ -605,6 +605,14 @@ kbd {
   --metadata-property-box-shadow-hover: 0 0 0 1px var(--cl-line);
   --metadata-property-box-shadow-focus: 0 0 0 1px color-mix(in srgb, var(--cl-accent) 42%, var(--cl-page));
 }
+/* Anthropic Sans 的 g 伸出 line-height: 1，药丸的 overflow 会把它切掉 */
+.metadata-property-value[data-property-type="tags"] .multi-select-pill,
+a.tag {
+  line-height: 1.45;
+}
+.multi-select-pill-content {
+  overflow: visible;
+}
 
 /* ---------- 提示框 ---------- */
 
