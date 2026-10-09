@@ -2,21 +2,21 @@
 
 ![Claudette](screenshot.png)
 
-Obsidian 主题。象牙底、居中正文栏、陶土色点缀。风格致敬，不是 Anthropic 官方主题。
+An Obsidian theme. Ivory page, a centered column, a clay accent. A nod to that style, not an official Anthropic theme.
 
-## 安装
+## Install
 
-把这个仓库放到库的 `.obsidian/themes/Claudette`，然后在外观里启用 Claudette。
+Clone this into the vault’s `.obsidian/themes/Claudette`, then enable Claudette under Appearance.
 
 ```bash
 git clone https://github.com/xinnyu/obsidian-claudette.git \
   "<vault>/.obsidian/themes/Claudette"
 ```
 
-## 字体
+## Fonts
 
-仓库里没有字体文件。英文会先找本机已安装的 Anthropic Serif、Anthropic Sans、Anthropic Mono；没有就用 Charter、Helvetica Neue、JetBrains Mono。汉字用 Songti SC。
+This repo does not include font files. English uses Anthropic Serif, Sans, and Mono when they are already installed, and otherwise Charter, Helvetica Neue, and JetBrains Mono. Chinese falls through to Songti SC.
 
-## 许可
+## License
 
-CSS 是 MIT。Anthropic 的字体不在这里，版权归字体权利人。
+The CSS is MIT. The Anthropic fonts are not in this repository.
