@@ -1,5 +1,7 @@
 # Claudette
 
+![Claudette](screenshot.png)
+
 Obsidian 主题。象牙底、居中正文栏、陶土色点缀。风格致敬，不是 Anthropic 官方主题。
 
 ## 安装
