@@ -1,0 +1,687 @@
+/*
+ * Claudette — Obsidian 主题。象牙底、居中栏、陶土色点缀。
+ * 风格致敬，不是 Anthropic 官方主题。
+ * 英文优先用本机已安装的 Anthropic Serif / Sans / Mono，
+ * 没有则落到 Charter、Helvetica Neue、JetBrains Mono。汉字用 Songti SC。
+ */
+
+body {
+  --cl-serif: "Anthropic Serif", Charter, Georgia, "Songti SC", serif;
+  --cl-sans: "Anthropic Sans", "Helvetica Neue", "Songti SC", sans-serif;
+  --cl-mono: "Anthropic Mono", "JetBrains Mono", "Songti SC", ui-monospace, monospace;
+  --cl-wt-medium: 500;
+  --cl-wt-semibold: 600;
+
+  --font-text-theme: var(--cl-sans);
+  --font-interface-theme: var(--cl-sans);
+  --font-monospace-theme: var(--cl-mono);
+  --font-text: var(--cl-sans);
+  --font-interface: var(--cl-sans);
+  --font-monospace: var(--cl-mono);
+
+  --h1-font: var(--cl-serif);
+  --h2-font: var(--cl-serif);
+  --h3-font: var(--cl-serif);
+  --h4-font: var(--cl-serif);
+  --h5-font: var(--cl-sans);
+  --h6-font: var(--cl-sans);
+  --h1-weight: 500;
+  --h2-weight: 500;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h5-weight: 500;
+  --h6-weight: 500;
+  --h1-size: 2.25rem;
+  --h2-size: 1.7rem;
+  --h3-size: 1.35rem;
+  --h4-size: 1.125rem;
+  --h5-size: 1rem;
+  --h6-size: 0.9rem;
+  --h1-line-height: 1.2;
+  --h2-line-height: 1.3;
+  --h3-line-height: 1.2;
+  --line-height-normal: 1.7;
+  --font-text-size: 20px;
+
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --radius-xl: 16px;
+  --input-radius: 8px;
+  --checkbox-radius: 4px;
+  --tab-radius-active: 8px 8px 0 0;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.theme-light {
+  color-scheme: light;
+  --cl-page: #faf9f5;
+  --cl-page-2: #f5f4ed;
+  --cl-sidebar: #f2f0e9;
+  --cl-fill: #ece9df;
+  --cl-fill-2: #e3e1d7;
+  --cl-paper: #ffffff;
+  --cl-paper-ring: rgba(0, 0, 0, 0.10);
+  --cl-paper-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  --cl-fg: #141413;
+  --cl-fg-secondary: #52514e;
+  --cl-fg-tertiary: #73726c;
+  --cl-fg-muted: #87867f;
+  --cl-line: rgba(31, 30, 29, 0.12);
+  --cl-line-2: rgba(31, 30, 29, 0.06);
+  --cl-line-strong: rgba(31, 30, 29, 0.22);
+  --cl-accent: #d97757;
+  --cl-accent-interactive: #c6613f;
+  --cl-accent-soft: rgba(217, 119, 87, 0.10);
+  --cl-button: #f0eee6;
+  --cl-button-hover: #e8e6dc;
+  --cl-border: #c2c0b6;
+  --accent-h: 15;
+  --accent-s: 63%;
+  --accent-l: 60%;
+  --cl-hover: rgba(31, 30, 29, 0.05);
+  --cl-selected: rgba(31, 30, 29, 0.08);
+  --cl-highlight: rgba(249, 224, 176, 0.65);
+  --cl-select: rgba(235, 201, 183, 0.55);
+
+  --code-keyword: #c2452d;
+  --code-string: #9c4a21;
+  --code-value: #9a6700;
+  --code-function: #6f42c1;
+  --code-comment: #6e7781;
+  --code-tag: #c2452d;
+  --code-property: #52514e;
+  --code-operator: #73726c;
+
+  --color-base-00: #faf9f5;
+  --color-base-05: #f5f4ed;
+  --color-base-10: #f2f0e9;
+  --color-base-20: #ece9df;
+  --color-base-25: #e3e1d7;
+  --color-base-30: #dedcd1;
+  --color-base-35: #d1cfc5;
+  --color-base-40: #c2c0b6;
+  --color-base-50: #b0aea5;
+  --color-base-60: #87867f;
+  --color-base-70: #73726c;
+  --color-base-100: #141413;
+
+  --callout-note: #3b6fa3;
+  --callout-tip: #3f7566;
+  --callout-important: #5f5a9c;
+  --callout-warning: #9a6700;
+  --callout-caution: #a63d5f;
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --cl-page: #262625;
+  --cl-page-2: #2c2c2a;
+  --cl-sidebar: #1f1f1e;
+  --cl-fill: #34332e;
+  --cl-fill-2: #3a3933;
+  --cl-paper: #2a2a28;
+  --cl-paper-ring: rgba(255, 255, 255, 0.08);
+  --cl-paper-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  --cl-fg: #f2f0e9;
+  --cl-fg-secondary: #d6d3c8;
+  --cl-fg-tertiary: #b8b6a9;
+  --cl-fg-muted: #9c9a90;
+  --cl-line: rgba(255, 255, 255, 0.10);
+  --cl-line-2: rgba(255, 255, 255, 0.06);
+  --cl-line-strong: rgba(255, 255, 255, 0.20);
+  --cl-accent: #d97757;
+  --cl-accent-interactive: #e6906f;
+  --cl-accent-soft: rgba(217, 119, 87, 0.14);
+  --cl-button: #3d3d3a;
+  --cl-button-hover: #30302e;
+  --cl-border: #5e5d59;
+  --accent-h: 15;
+  --accent-s: 63%;
+  --accent-l: 60%;
+  --cl-hover: rgba(255, 255, 255, 0.05);
+  --cl-selected: rgba(255, 255, 255, 0.10);
+  --cl-highlight: rgba(227, 192, 123, 0.32);
+  --cl-select: rgba(217, 119, 87, 0.35);
+
+  --code-keyword: #ff8d77;
+  --code-string: #e5b07e;
+  --code-value: #e3c07b;
+  --code-function: #c8a6ff;
+  --code-comment: #8b8b81;
+  --code-tag: #ff8d77;
+  --code-property: #e3c07b;
+  --code-operator: #b8b6a9;
+
+  --color-base-00: #1f1f1e;
+  --color-base-05: #262625;
+  --color-base-10: #2a2a28;
+  --color-base-20: #2c2c2a;
+  --color-base-25: #34332e;
+  --color-base-30: #3a3933;
+  --color-base-35: #4a4944;
+  --color-base-40: #6d6b67;
+  --color-base-50: #9c9a90;
+  --color-base-60: #b8b6a9;
+  --color-base-70: #d6d3c8;
+  --color-base-100: #f2f0e9;
+
+  --callout-note: #8ab4f8;
+  --callout-tip: #7fc4ad;
+  --callout-important: #b3aee6;
+  --callout-warning: #e3c07b;
+  --callout-caution: #e58aa6;
+}
+
+.theme-light,
+.theme-dark {
+  --background-primary: var(--cl-page);
+  --background-primary-alt: var(--cl-page-2);
+  --background-secondary: var(--cl-sidebar);
+  --background-secondary-alt: var(--cl-fill);
+  --background-modifier-hover: var(--cl-hover);
+  --background-modifier-active-hover: var(--cl-selected);
+  --background-modifier-border: var(--cl-line);
+  --background-modifier-border-hover: var(--cl-line-strong);
+  --background-modifier-border-focus: var(--cl-accent);
+  --background-modifier-form-field: var(--cl-paper);
+  --background-modifier-form-field-highlighted: var(--cl-fill);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.12);
+  --background-modifier-cover: var(--cl-page);
+  --background-modifier-error: var(--callout-caution);
+
+  --text-normal: var(--cl-fg);
+  --text-muted: var(--cl-fg-tertiary);
+  --text-faint: var(--cl-fg-muted);
+  --text-on-accent: var(--cl-page);
+  --text-accent: var(--cl-accent-interactive);
+  --text-accent-hover: var(--cl-accent);
+  --text-selection: var(--cl-select);
+  --text-highlight-bg: var(--cl-highlight);
+  --text-error: var(--callout-caution);
+  --text-warning: var(--callout-warning);
+  --text-success: var(--callout-tip);
+
+  --interactive-accent: var(--cl-accent);
+  --interactive-accent-hover: var(--cl-accent-interactive);
+  --interactive-normal: var(--cl-button);
+  --interactive-hover: var(--cl-button-hover);
+  --file-line-width: 44rem;
+
+  /* 实时预览表格的线由这些变量画。清掉默认全网格，只留我们补的横线 */
+  --table-border-width: 0px;
+  --table-header-border-width: 0px;
+  --table-column-first-border-width: 0px;
+  --table-column-last-border-width: 0px;
+  --table-row-last-border-width: 0px;
+  --table-header-background: var(--cl-page-2);
+  --table-header-background-hover: var(--cl-page-2);
+  --table-header-weight: 500;
+  --table-header-color: var(--cl-fg-secondary);
+  --table-border-color: var(--cl-border);
+  --table-white-space: normal;
+
+  --bold-color: var(--cl-fg);
+  --italic-color: var(--cl-fg);
+  --h1-color: var(--cl-fg);
+  --h2-color: var(--cl-fg);
+  --h3-color: var(--cl-fg);
+  --h4-color: var(--cl-fg);
+  --h5-color: var(--cl-fg);
+  --h6-color: var(--cl-fg);
+
+  --titlebar-background: var(--cl-sidebar);
+  --titlebar-background-focused: var(--cl-sidebar);
+  --tab-container-background: var(--cl-sidebar);
+  --tab-background: transparent;
+  --tab-background-active: var(--cl-page);
+  --tab-text-color: var(--cl-fg-tertiary);
+  --tab-text-color-active: var(--cl-fg);
+  --tab-text-color-focused: var(--cl-fg);
+  --tab-divider-color: var(--cl-line);
+  --tab-outline-color: transparent;
+  --ribbon-background: var(--cl-sidebar);
+  --divider-color: var(--cl-line);
+  --nav-item-color: var(--cl-fg-secondary);
+  --nav-item-color-hover: var(--cl-fg);
+  --nav-item-color-active: var(--cl-fg);
+  --nav-item-background-hover: var(--cl-hover);
+  --nav-item-background-active: var(--cl-selected);
+  --nav-item-size: 14px;
+  --metadata-label-text-color: var(--cl-fg-muted);
+  --metadata-input-text-color: var(--cl-fg);
+  --code-background: var(--cl-page-2);
+  --code-normal: var(--cl-fg-secondary);
+  --code-size: 0.875em;
+  --code-border-width: 1px;
+  --code-border-color: var(--cl-line-strong);
+  --code-radius: 8px;
+  --blockquote-border-color: var(--cl-border);
+  --blockquote-border-thickness: 3px;
+  --embed-background: var(--cl-page-2);
+  --checkbox-color: var(--cl-accent-interactive);
+  --checkbox-color-hover: var(--cl-accent);
+  --checklist-done-color: var(--cl-fg-muted);
+  --list-marker-color: var(--cl-fg);
+  --link-color: var(--cl-fg);
+  --link-color-hover: var(--cl-accent-interactive);
+  --link-external-color: var(--cl-fg);
+  --link-external-color-hover: var(--cl-accent-interactive);
+  --link-unresolved-color: var(--cl-fg-muted);
+  --tag-color: var(--cl-accent-interactive);
+  --tag-background: var(--cl-accent-soft);
+  --indentation-guide: var(--cl-line);
+  --status-bar-background: var(--cl-sidebar);
+  --status-bar-text-color: var(--cl-fg-muted);
+  --modal-background: var(--cl-paper);
+  --prompt-background: var(--cl-paper);
+  --menu-background: var(--cl-paper);
+  --popover-background: var(--cl-paper);
+  --graph-line: var(--cl-line-strong);
+  --graph-node: var(--cl-fg-muted);
+  --graph-node-focused: var(--cl-accent);
+}
+
+::selection { background: var(--cl-select); }
+
+button.mod-cta {
+  background-color: var(--cl-accent);
+  color: #fff;
+}
+button.mod-cta:hover {
+  background-color: var(--cl-accent-interactive);
+  color: #fff;
+}
+
+/* ---------- 正文画布：官方文章是象牙底，没有白卡片 ---------- */
+
+.workspace-leaf-content[data-type="markdown"] .view-content,
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-preview-view {
+  background: var(--cl-page);
+}
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+  background: var(--cl-page);
+  border-right: 1px solid var(--cl-line);
+}
+
+/* 官网文章栏是 12 栏网格里的第 4–9 栏，宽 44rem，象牙底上居中 */
+.markdown-source-view.mod-cm6 .cm-sizer,
+.markdown-preview-view .markdown-preview-sizer {
+  max-width: var(--file-line-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 文件头跟着正文栏的左缘。前进后退挂到栏外，标题文字才和正文对齐 */
+.workspace-leaf-content[data-type="markdown"] .view-header {
+  padding-left: max(var(--size-4-3), calc((100% - var(--file-line-width)) / 2));
+}
+.workspace-leaf-content[data-type="markdown"] .view-header-nav-buttons {
+  margin-inline-start: -4.25rem;
+}
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-source-view.mod-cm6 .cm-line {
+  max-width: var(--file-line-width);
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-table-row {
+  max-width: 100%;
+}
+
+/* ---------- 标题与正文 ---------- */
+
+.markdown-rendered h1,
+.cm-header-1 {
+  font-family: var(--cl-serif);
+  font-weight: 500;
+}
+
+/* 标题下方短横线，落在 padding 里，不压着字形 */
+.markdown-rendered h1,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1 {
+  position: relative;
+  padding-bottom: 0.7em;
+}
+.markdown-rendered h1::after,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.12em;
+  width: 2.5rem;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--cl-accent);
+}
+
+/* 文件名不是标题。默认字号几乎是一级标题，会和正文 H1 叠成两个标题 */
+.inline-title:not([data-level]) {
+  font-family: var(--cl-sans);
+  font-size: 0.8125rem;
+  font-weight: var(--cl-wt-medium);
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  color: var(--cl-fg-muted);
+  padding: 0 0 1.35rem;
+  margin: 0;
+}
+
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4 {
+  font-family: var(--cl-serif);
+  font-weight: 500;
+}
+
+.markdown-rendered h5,
+.markdown-rendered h6,
+.cm-header-5,
+.cm-header-6 {
+  font-family: var(--cl-sans);
+  font-weight: var(--cl-wt-medium);
+}
+
+.markdown-rendered h2,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2 {
+  margin-top: 1.8em;
+}
+
+.markdown-rendered h3,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-3 {
+  margin-top: 1.8em;
+}
+
+.markdown-rendered p,
+.markdown-rendered li {
+  color: var(--cl-fg);
+}
+
+strong, .cm-strong { font-weight: var(--cl-wt-semibold); }
+
+.markdown-rendered a,
+.cm-link,
+.cm-hmd-internal-link {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: rgba(217, 119, 87, 0.55);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.markdown-rendered a:hover,
+.cm-link:hover,
+.cm-hmd-internal-link:hover {
+  text-decoration-color: var(--cl-accent-interactive);
+}
+
+mark, .cm-highlight {
+  background: var(--cl-highlight);
+  color: inherit;
+  border-radius: 2px;
+}
+
+/* ---------- 列表、分割线、引用 ---------- */
+
+.markdown-rendered ul > li::marker,
+.cm-formatting-list-ul {
+  color: var(--cl-accent);
+}
+.cm-formatting-list-ul .list-bullet::after {
+  background-color: var(--cl-accent);
+}
+
+.markdown-rendered hr,
+.cm-line.hr {
+  position: relative;
+  overflow: visible;
+  border: 0;
+  height: 1.5rem;
+  background: transparent;
+  margin: 2.5rem 0;
+}
+.cm-line.hr hr {
+  border: 0;
+  height: 0;
+  background: transparent;
+}
+.markdown-rendered hr::before,
+.cm-line.hr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--cl-border);
+}
+.markdown-rendered hr::after,
+.cm-line.hr::after {
+  content: "*";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -58%);
+  padding: 0 0.7em;
+  background: var(--cl-page);
+  color: var(--cl-accent);
+  font-family: var(--cl-serif);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.markdown-rendered blockquote,
+.cm-line.HyperMD-quote {
+  border-left: 3px solid var(--cl-border);
+  padding-left: 1.5rem;
+  color: var(--cl-fg-secondary);
+}
+
+/* ---------- 代码 ---------- */
+
+body :is(code, .cm-inline-code, .HyperMD-codeblock, pre, .cm-hmd-indented-code),
+.cm-s-obsidian span.cm-inline-code,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  font-family: var(--cl-mono) !important;
+  font-feature-settings: "liga" 0, "calt" 1;
+}
+
+.markdown-rendered :not(pre) > code,
+.cm-s-obsidian span.cm-inline-code {
+  background: var(--cl-page-2);
+  color: var(--cl-fg);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.9em;
+}
+
+.markdown-rendered pre {
+  background: var(--code-background);
+  border: var(--code-border-width) dashed var(--code-border-color);
+  border-radius: var(--code-radius);
+  padding: 1rem 1.25rem;
+  color: var(--cl-fg-secondary);
+}
+
+/* 边框画在 Obsidian 的 codeblock 背景层上，不要再在每一行上描一圈 */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  background: transparent;
+  color: var(--cl-fg-secondary);
+}
+.markdown-source-view.mod-cm6 div.HyperMD-codeblock-bg {
+  border-style: dashed;
+  border-color: var(--code-border-color);
+}
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg.HyperMD-codeblock-end-bg {
+  border-width: var(--code-border-width);
+  border-style: dashed;
+  border-radius: var(--code-radius);
+}
+
+kbd {
+  background: var(--cl-paper);
+  box-shadow: inset 0 0 0 1px var(--cl-line), inset 0 -1.5px 0 var(--cl-line);
+  border-radius: 5px;
+  padding: 0.05em 0.4em;
+  font-size: 0.8125em;
+  color: var(--cl-fg-secondary);
+}
+
+/* ---------- 表格、图片、脚注、属性 ---------- */
+
+.markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper {
+  width: 100%;
+}
+.markdown-rendered table,
+.markdown-source-view.mod-cm6 .cm-table-widget table {
+  width: 100%;
+  border: 1px dashed var(--cl-line-strong);
+  border-radius: 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background: transparent;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+.markdown-rendered th,
+.markdown-rendered td,
+.markdown-source-view.mod-cm6 .cm-table-widget th,
+.markdown-source-view.mod-cm6 .cm-table-widget td {
+  border: 0;
+  border-bottom: 1px dashed var(--cl-line);
+  background: transparent;
+}
+.markdown-rendered thead th,
+.markdown-source-view.mod-cm6 .cm-table-widget thead th,
+.markdown-source-view.mod-cm6 .cm-table-widget thead th .table-cell-wrapper {
+  background: var(--cl-page-2);
+  border-bottom-color: var(--cl-line-strong);
+}
+.markdown-source-view.mod-cm6 .cm-table-widget th .cm-content,
+.markdown-source-view.mod-cm6 .cm-table-widget th .table-cell-wrapper {
+  font-weight: 500;
+  color: var(--cl-fg-secondary);
+}
+.markdown-rendered thead th {
+  font-weight: 500;
+  color: var(--cl-fg-secondary);
+}
+.markdown-rendered tr:last-child td,
+.markdown-source-view.mod-cm6 .cm-table-widget tr:last-child td {
+  border-bottom: 0;
+}
+.markdown-source-view.mod-cm6 .cm-table-widget th:first-child,
+.markdown-source-view.mod-cm6 .cm-table-widget td:first-child,
+.markdown-rendered th:first-child,
+.markdown-rendered td:first-child {
+  white-space: nowrap;
+}
+
+.markdown-rendered img {
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--cl-line);
+}
+
+.markdown-rendered .footnotes {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--cl-line);
+  color: var(--cl-fg-tertiary);
+  font-size: 0.9375rem;
+}
+.markdown-source-view.mod-cm6 .metadata-container,
+.markdown-preview-view .metadata-container {
+  transform: none;
+  padding-inline: 1rem;
+}
+.metadata-container {
+  border: 1px dashed var(--cl-line);
+  border-radius: 12px;
+  background: var(--cl-page-2);
+  color: var(--cl-fg-tertiary);
+  --metadata-property-box-shadow-hover: 0 0 0 1px var(--cl-line);
+  --metadata-property-box-shadow-focus: 0 0 0 1px color-mix(in srgb, var(--cl-accent) 42%, var(--cl-page));
+}
+
+/* ---------- 提示框 ---------- */
+
+.callout {
+  border: 1px solid var(--callout-line, var(--cl-line));
+  border-left: 3px solid var(--callout-color, var(--cl-accent));
+  border-radius: 12px;
+  background: var(--callout-bg, var(--cl-accent-soft));
+  color: var(--cl-fg);
+}
+.callout-title {
+  font-family: var(--cl-sans);
+  font-weight: var(--cl-wt-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--callout-color, var(--cl-accent));
+}
+
+.callout[data-callout="note"],
+.callout[data-callout="info"],
+.callout[data-callout="abstract"] {
+  --callout-color: var(--callout-note);
+  --callout-bg: color-mix(in srgb, var(--callout-note) 10%, transparent);
+  --callout-line: color-mix(in srgb, var(--callout-note) 35%, transparent);
+}
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="success"] {
+  --callout-color: var(--callout-tip);
+  --callout-bg: color-mix(in srgb, var(--callout-tip) 12%, transparent);
+  --callout-line: color-mix(in srgb, var(--callout-tip) 35%, transparent);
+}
+.callout[data-callout="important"] {
+  --callout-color: var(--callout-important);
+  --callout-bg: color-mix(in srgb, var(--callout-important) 12%, transparent);
+  --callout-line: color-mix(in srgb, var(--callout-important) 35%, transparent);
+}
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  --callout-color: var(--callout-warning);
+  --callout-bg: color-mix(in srgb, var(--callout-warning) 14%, transparent);
+  --callout-line: color-mix(in srgb, var(--callout-warning) 40%, transparent);
+}
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="failure"] {
+  --callout-color: var(--callout-caution);
+  --callout-bg: color-mix(in srgb, var(--callout-caution) 12%, transparent);
+  --callout-line: color-mix(in srgb, var(--callout-caution) 35%, transparent);
+}
+
+/* ---------- 侧栏 ---------- */
+
+/* 半透明时侧栏被设成 transparent !important，磨砂盖掉 --cl-sidebar */
+body.is-translucent:not(.is-fullscreen) :is(
+  .workspace-ribbon.mod-primary,
+  .mod-primary-split,
+  .mod-secondary-split,
+  .mod-left-split,
+  .mod-right-split,
+  .workspace-sidedock-vault-profile
+) {
+  background-color: var(--cl-sidebar) !important;
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  box-shadow: inset 2px 0 0 var(--cl-accent);
+}
+
+.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active {
+  color: var(--cl-accent-interactive);
+}
+
+.workspace-tab-header.is-active {
+  box-shadow: inset 0 -2px 0 var(--cl-accent);
+}
